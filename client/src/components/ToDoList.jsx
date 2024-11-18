@@ -26,19 +26,19 @@ const ToDoList = () => {
                     value={editText}
                     onChange={editChange}
                   />
-                  <button onClick={editItem}  aria-label="Done Edit" style={{ background: "none", border: "none" }}>
+                  <button onClick={editItem}  aria-label={`Done Edit Task ${item.id}`} style={{ background: "none", border: "none" }}>
                   <i class="fa fa-check" style={{ fontSize: "1.5rem" }}></i>
                   </button>
                 </>
               ) : (
                 <>
                   {item.title}
-                  <button onClick={() => startEdit(item.id, item.title)} aria-label="Edit Task" style={{ background: "none", border: "none" }}>
+                  <button onClick={() => startEdit(item.id, item.title)} aria-label={`Edit Task ${item.id}`} style={{ background: "none", border: "none" }}>
                   <i class="fa fa-pencil-square-o" style={{ fontSize: "1.5rem" }}></i>
                   </button>
                 </>
               )}
-              <button onClick={() => deleteItem(item.id)} aria-label="Delete Task" style={{ background: "none", border: "none" }}>
+              <button onClick={() => deleteItem(item.id)} aria-label={`Delete Task ${item.id}`} style={{ background: "none", border: "none" }}>
               <i class="fa fa-trash-o" style={{ fontSize: "1.5rem" }}></i>
               </button>
             </li>
