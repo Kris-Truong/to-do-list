@@ -11,8 +11,10 @@ function handleChange (event) {
 
     return (
         <div className="form">
-        <input className="input-area" type="text" onChange={handleChange} value={inputText} />
-        <i className="fa fa-plus-circle" onClick={addItem} aria-hidden="true" style={{fontSize:"1.5rem"}}></i>
+        <input className="input-area" type="text" onChange={handleChange} value={inputText} placeholder="Add a new task"/>
+        <button onClick={addItem} aria-label="Add Task" style={{ background: "none", border: "none" }}>
+             <i className="fa fa-plus-circle" style={{ fontSize: "1.8rem" }}></i>
+        </button>
         </div>
     )
 }
